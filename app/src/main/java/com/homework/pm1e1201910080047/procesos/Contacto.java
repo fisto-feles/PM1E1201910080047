@@ -42,7 +42,7 @@ public class Contacto {
                 codigo = 503;
                 break;
             case "Costa Rica (506)":
-                codigo = 506";
+                codigo = 506;
                 break;
         }
 
