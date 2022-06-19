@@ -107,7 +107,7 @@ public class ListaContactos extends AppCompatActivity {
 
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "+" + contacto.getCodigoPais().toString() + contacto.getNumero().toString);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "+" + contacto.getCodigoPais().toString() + contacto.getNumero().toString());
                 sendIntent.setType("text/plain");
 
                 Intent shareIntent = Intent.createChooser(sendIntent, null);
@@ -131,7 +131,7 @@ public class ListaContactos extends AppCompatActivity {
                 if(ActivityCompat.checkSelfPermission(ListaContactos.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(getApplicationContext(), "Llamando", Toast.LENGTH_LONG).show();
                     Intent llamada = new Intent(Intent.ACTION_CALL);
-                    llamada.setData(Uri.parse("tel: +" + contecto.getCodigoPais().toString() + contacto.getNumero().toString()));
+                    llamada.setData(Uri.parse("tel: +" + contacto.getCodigoPais().toString() + contacto.getNumero().toString()));
                     startActivity(llamada);
                 }else{
                     ActivityCompat.requestPermissions(ListaContactos.this, new String[]{ Manifest.permission.CALL_PHONE}, 1);
