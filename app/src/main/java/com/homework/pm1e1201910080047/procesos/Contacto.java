@@ -27,22 +27,22 @@ public class Contacto {
     public void setId(Integer id) { this.id = id; }
 
     public String getPais() { return this.pais; }
-    public String getCodigoPais() {
+    public Integer getCodigoPais() {
 
-        String codigo = null;
+        Integer codigo = null;
 
         switch (this.pais) {
             case "Honduras (504)":
-                codigo = "+504";
+                codigo = 504;
                 break;
             case "Guatemala (502)":
-                codigo = "+502";
+                codigo = 502;
                 break;
             case "Salvador (503)":
-                codigo = "+503";
+                codigo = 503;
                 break;
             case "Costa Rica (506)":
-                codigo = "+506";
+                codigo = 506";
                 break;
         }
 
