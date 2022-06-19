@@ -60,6 +60,10 @@ public class Contacto {
     public void setNota(String nota) { this.nota = nota; }
 
     public Bitmap getFoto() {
+        if (this.foto == null) {
+            return null;
+        }
+        
         ByteArrayInputStream bais = new ByteArrayInputStream(this.foto);
         return BitmapFactory.decodeStream(bais);
     }
